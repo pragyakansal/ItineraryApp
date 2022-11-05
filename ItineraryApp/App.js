@@ -1,10 +1,18 @@
+
 import React, { Component } from 'react';
 import type {Node} from 'react';
 import SignupScreen from './screens/signupscreen';
+import HomeScreen from './screens/homescreen';
+import SignUpForm from './screens/signupform';
+import LoginForm from './screens/loginform';
+import ItineraryListScreen from './screens/itinerarylistscreen';
+import BookmarksScreen from './screens/bookmarksscreen';
+import StackNavigator from './components/StackNavigator';
 
 //Navigation Imports
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   SafeAreaView,
   ScrollView,
@@ -22,8 +30,13 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SignupForm from './screens/signupform';
+import BottomNavBar from './components/BottomNavigation';
+import { Searchbar } from 'react-native-paper';
+import { SearchBar } from 'react-native-screens';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -58,13 +71,21 @@ class App extends Component {
 render() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      {/* <Stack.Navigator initialRouteName="SignupForm">
         <Stack.Screen name="SignupScreen" component={SignupScreen} />
-      </Stack.Navigator>
+        <Stack.Screen name="SignupForm" component={SignupForm} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="SignUpForm" component={SignUpForm} />
+        <Stack.Screen name="ItineraryListScreen" component={ItineraryListScreen} />
+        <Stack.Screen name="LoginForm" component={LoginForm} />
+        <Stack.Screen name="BookmarksScreen" component={BookmarksScreen} />
+        </Stack.Navigator> */}
+      <BottomNavBar />
     </NavigationContainer>
   );
 }
 };
+
 
 const styles = StyleSheet.create({
   sectionContainer: {

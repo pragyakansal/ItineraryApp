@@ -1,7 +1,7 @@
 import { ImageBackground, StyleSheet, Text, View, Platform, Dimensions, TouchableOpacity, Pressable, SafeAreaView } from 'react-native';
 import React, { Component } from 'react';
 
-class LoginForm extends Component {
+class ItineraryListScreen extends Component {
   render() {
     <View style={styles.container}>
       <ImageBackground source={require('../assets/appimages/loginformbackground.png')} resizeMode="cover" style= {{flex: 1, justifyContent: "center", height: 650, width: 500,}}>
@@ -11,7 +11,7 @@ class LoginForm extends Component {
   }  
 }
 
-export default LoginForm
+export default ItineraryListScreen
 
 
 const styles = StyleSheet.create({

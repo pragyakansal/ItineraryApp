@@ -1,8 +1,8 @@
-import {ImageBackground, StyleSheet, Text, View, Platform, Dimensions, TouchableOpacity, Pressable, Button } from 'react-native';
-import React, { Component } from 'react';
+import {ImageBackground, StyleSheet, Text, View, Platform, Dimensions, TouchableOpacity, Pressable, Button, SafeAreaView } from 'react-native';
+import React, { Component, useEffect } from 'react';
 import CustomAndroid from '../components/CustomAndroid';
 
-const image = { uri: "https://unsplash.com/photos/lu8-EpYHkho" };
+const image = { uri: "https://images.unsplash.com/photo-1526482312921-58d5666a52c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2130&q=80" };
 
 
 
@@ -17,9 +17,6 @@ class SignupScreen extends Component {
         </TouchableOpacity>
         <TouchableOpacity style={styles.button2}>
           <Text style={styles.custom}>Login</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button3}>
-          <Text style={styles.custom}>Guest</Text>
         </TouchableOpacity>
       </View>
     )
@@ -36,8 +33,8 @@ const styles = StyleSheet.create({
     image: {
       flex: 1,
       justifyContent: "center",
-      height: 300,
-      width: 100
+      height: 650,
+      width: 500,
     },
     custom: {
       fontFamily: 'ABeeZee',
@@ -62,18 +59,8 @@ const styles = StyleSheet.create({
       backgroundColor: "#DA5263",
       width: 205,
       height: 56,
-      marginBottom: 22,
+      marginBottom: 250,
       marginHorizontal: 100
-    },
-    button3: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderRadius: 13,
-      backgroundColor: "#744578",
-      width: 205,
-      height: 56,
-      marginHorizontal: 100,
-      marginBottom: 125
     },
 
   });

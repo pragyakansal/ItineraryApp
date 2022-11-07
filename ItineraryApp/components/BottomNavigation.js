@@ -6,6 +6,7 @@ import BookmarksScreen from '../screens/bookmarksscreen'
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native'
 import EditProfileScreen from '../screens/editprofilescreen'
 const BottomNavigator = createBottomTabNavigator();
+import CreateItineraryScreen from '../screens/createitineraryscreen'
 
 const BottomNavBar = () => {
     return (
@@ -52,7 +53,7 @@ const BottomNavBar = () => {
                 ),    
             }} />
 
-            <BottomNavigator.Screen name="Itineraries" component={ItineraryListScreen} options={{
+            <BottomNavigator.Screen name="Itineraries" component={CreateItineraryScreen} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center'}}>
                         <Image

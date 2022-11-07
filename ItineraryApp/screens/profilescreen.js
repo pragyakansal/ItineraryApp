@@ -1,4 +1,4 @@
-import {ImageBackground, StyleSheet, Text, View, Platform, Dimensions, TouchableOpacity, Pressable, Button, SafeAreaView, ActivityIndicator, TouchableHighlight, Image } from 'react-native';
+import {ImageBackground, StyleSheet, Text, View, Platform, Dimensions, TouchableOpacity, Pressable, Button, SafeAreaView, ActivityIndicator, TouchableHighlight, Image, ImageBackgroundComponent } from 'react-native';
 import React, { Component, useState, useEffect } from 'react';
 import CustomAndroid from '../components/CustomAndroid';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
@@ -52,7 +52,8 @@ export default ProfileScreen
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1
+      flex: 1,
+      backgroundColor: "#FFFFFF",
     },
 
     header: {

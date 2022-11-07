@@ -62,7 +62,7 @@ const BottomNavBar = () => {
                             style={{
                                 width: 46,
                                 height: 50,
-                                tintColor: focused ? '#DA5263': '#FFFFFF'
+                                tintColor: focused ? '#DA5263':'#FFFFFF'
                             }}
                         />    
                     </View>
